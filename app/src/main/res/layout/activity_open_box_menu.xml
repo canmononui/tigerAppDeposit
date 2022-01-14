@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestSystemActivity"
+    android:background="@color/yellow" >
+
+    <!-- LAYOUT TOP HEADER -->
+    <LinearLayout
+        android:id="@+id/topHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- LAYOUT BACK BUTTON [LEFT] -->
+        <LinearLayout
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            android:clickable="true" >
+
+            <!-- BACK BUTTON -->
+            <ImageView
+                android:id="@+id/imgBackButton"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:src="@drawable/backicon" />
+        </LinearLayout>
+        <!-- END LAYOUT BACK BUTTON [LEFT] -->
+
+        <!-- TEXT HEADER TOP [CENTER] -->
+        <LinearLayout
+            android:id="@+id/textHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!-- TEXT SHOP NAME -->
+            <TextView
+                android:id="@+id/textShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="ปตท."
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+            <!-- TEXT SHOP BRANCH & BOX NUMBER -->
+            <TextView
+                android:id="@+id/textBranchBoxNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:layout_marginTop="-5dp"
+                android:text="สาขาดินแดง #1"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </LinearLayout>
+        <!-- END TEXT HEADER TOP [CENTER] -->
+
+        <!-- LAYOUT BACK BUTTON [RIGHT] -->
+        <LinearLayout
+            android:id="@+id/layoutBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alwaysDrawnWithCache="false"
+            android:animateLayoutChanges="false"
+            android:gravity="end">
+
+            <!-- BOX IMAGE -->
+            <ImageView
+                android:id="@+id/boxImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/machine" />
+
+            <!-- DOT BOX STATUS -->
+            <View
+                android:id="@+id/status"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/dot_status_online"/>
+        </LinearLayout>
+        <!-- END LAYOUT BACK BUTTON [RIGHT] -->
+    </LinearLayout>
+    <!-- END LAYOUT TOP HEADER -->
+
+    <!-- BG WHITE -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white"
+        app:layout_constraintTop_toBottomOf="@+id/topHeader"
+        android:layout_marginTop="30dp" />
+
+    <!-- CENTER LAYOUT -->
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- BOX IMAGE ICON-->
+        <ImageView
+            android:id="@+id/finishLoadingImg"
+            android:layout_width="380dp"
+            android:layout_height="380dp"
+            android:src="@drawable/door_close_icon" />
+
+        <!-- TEXT TOPIC -->
+        <TextView
+            android:id="@+id/textTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text="กดยืนยันและไขกุญแจ"
+            android:textColor="@color/black"
+            android:textSize="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- TEXT DES -->
+        <TextView
+            android:id="@+id/textDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="กดปุ่มยืนยันและไขกุญแจที่ตู้เพื่อทำการเปิดตู้"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+    <!-- END CENTER LAYOUT -->
+
+    <!-- LAYOUT BUTTON -->
+    <LinearLayout
+       android:id="@+id/layoutButton"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:weightSum="100"
+       android:layout_marginStart="20dp"
+       android:layout_marginEnd="20dp"
+       android:layout_marginBottom="20dp"
+       app:layout_constraintBottom_toBottomOf="parent">
+
+       <!-- CANCEL BUTTON -->
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:background="@drawable/bg_button_white"
+            android:fontFamily="@font/kanit_regular"
+            android:padding="25dp"
+            android:stateListAnimator="@null"
+            android:text="ยกเลิก"
+            android:textColor="@color/black"
+            android:textSize="45dp" />
+
+        <!-- SUBMIT BUTTON -->
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="70"
+            android:background="@drawable/bg_button_yellow"
+            android:fontFamily="@font/kanit_regular"
+            android:padding="25dp"
+            android:stateListAnimator="@null"
+            android:text="ยืนยัน"
+            android:textColor="@color/black"
+            android:textSize="45dp" />
+    </LinearLayout>
+    <!-- END LAYOUT BUTTON -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

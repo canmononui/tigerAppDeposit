@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- LAYOUT ALERT POPUP -->
+    <RelativeLayout
+        android:id="@+id/layoutPopup"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:background="@drawable/bg_alert_yellow"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- TOP TEXT -->
+        <TextView
+            android:id="@+id/textTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="โปรดตรวจสอบข้อมูลซองดรอบ"
+            android:textColor="@color/black"
+            android:textSize="45sp" />
+
+        <!-- LAYOUT SUM -->
+        <LinearLayout
+            android:id="@+id/layoutSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTop"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- IMAGE -->
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/thbicon" />
+
+            <!-- LAYOUT TEXT MONEY -->
+            <LinearLayout
+                android:id="@+id/layoutTextAmountSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp" >
+
+                <!-- TEXT -->
+                <TextView
+                    android:id="@+id/textSum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="จำนวนเงิน : ฿"
+                    android:textColor="@color/black"
+                    android:textSize="45sp" />
+                <!-- TEXT -->
+                <TextView
+                    android:id="@+id/textAmountBath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="500"
+                    android:textColor="@color/black"
+                    android:textSize="45sp" />
+            </LinearLayout>
+            <!-- END LAYOUT TEXT MONEY -->
+        </LinearLayout>
+        <!-- END LAYOUT SUM -->
+
+        <!-- TEXT DES -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layoutButton"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text="*โปรดตรวจสอบความถูกต้องของข้อมูล"
+            android:textColor="@color/black"
+            android:textSize="35sp" />
+
+
+        <!-- LAYOUT BUTTON -->
+        <LinearLayout
+            android:id="@+id/layoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:weightSum="100"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- CANCEL BUTTON -->
+            <Button
+                android:id="@+id/buttonCancelAlert"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:background="@drawable/bg_button_yellow_alert"
+                android:fontFamily="@font/kanit_regular"
+                android:padding="25dp"
+                android:stateListAnimator="@null"
+                android:text="ยกเลิก"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- SUBMIT BUTTON -->
+            <Button
+                android:id="@+id/buttonSubmitAlert"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="60"
+                android:background="@drawable/bg_button_white_alert"
+                android:fontFamily="@font/kanit_regular"
+                android:padding="25dp"
+                android:stateListAnimator="@null"
+                android:text="ตกลง"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+        </LinearLayout>
+        <!-- END LAYOUT BUTTON -->
+
+    </RelativeLayout>
+    <!-- END LAYOUT ALERT POPUP -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

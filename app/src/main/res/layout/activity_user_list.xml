@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserListActivity"
+    android:background="@color/yellow" >
+
+    <!-- LAYOUT TOP HEADER -->
+    <LinearLayout
+        android:id="@+id/topHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- LAYOUT BACK BUTTON [LEFT] -->
+        <LinearLayout
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            android:clickable="true" >
+
+            <!-- BACK BUTTON -->
+            <ImageView
+                android:id="@+id/imgBackButton"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:src="@drawable/backicon" />
+        </LinearLayout>
+        <!-- END LAYOUT BACK BUTTON [LEFT] -->
+
+        <!-- TEXT HEADER TOP [CENTER] -->
+        <LinearLayout
+            android:id="@+id/textHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!-- TEXT SHOP NAME -->
+            <TextView
+                android:id="@+id/textShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="ปตท."
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+            <!-- TEXT SHOP BRANCH & BOX NUMBER -->
+            <TextView
+                android:id="@+id/textBranchBoxNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:layout_marginTop="-5dp"
+                android:text="สาขาดินแดง #1"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </LinearLayout>
+        <!-- END TEXT HEADER TOP [CENTER] -->
+
+        <!-- LAYOUT BACK BUTTON [RIGHT] -->
+        <LinearLayout
+            android:id="@+id/layoutBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alwaysDrawnWithCache="false"
+            android:animateLayoutChanges="false"
+            android:gravity="end">
+
+            <!-- BOX IMAGE -->
+            <ImageView
+                android:id="@+id/boxImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/machine" />
+
+            <!-- DOT BOX STATUS -->
+            <View
+                android:id="@+id/status"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/dot_status_online"/>
+        </LinearLayout>
+        <!-- END LAYOUT BACK BUTTON [RIGHT] -->
+    </LinearLayout>
+    <!-- END LAYOUT TOP HEADER -->
+
+    <!-- BG WHITE -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_white"
+        app:layout_constraintTop_toBottomOf="@+id/topHeader" />
+
+    <!-- TEXT -->
+    <TextView
+        android:id="@+id/textMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kanit_medium"
+        android:layout_marginTop="30dp"
+        android:text="รายการผู้ใช้"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <!-- TABLE -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textMenu"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMenu">
+
+        <!-- HEADER TABLE -->
+        <TableRow
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_header_table"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
+
+            <!-- TEXT HEADER ID -->
+            <TextView
+                android:id="@+id/textHeaderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="center"
+                android:text="ID"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- TEXT HEADER NAME -->
+            <TextView
+                android:id="@+id/textHeaderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="center"
+                android:text="NAME"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- TEXT HEADER ROLE -->
+            <TextView
+                android:id="@+id/textHeaderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_marginStart="200dp"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="center"
+                android:text="ROLE"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+        </TableRow>
+        <!-- END HEADER TABLE -->
+
+        <!-- DATA 1 TABLE -->
+        <TableRow
+            android:id="@+id/data1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
+
+            <!-- TEXT DATA ID -->
+            <TextView
+                android:id="@+id/textData1Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="1001"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- TEXT DATA NAME -->
+            <TextView
+                android:id="@+id/textData1Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="Jane"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- TEXT DATA ROLE -->
+            <TextView
+                android:id="@+id/textData1Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_marginStart="200dp"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="Owner"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+        </TableRow>
+        <!-- END DATA 1 TABLE -->
+
+        <!-- DATA 2 TABLE -->
+        <TableRow
+            android:id="@+id/data2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
+
+            <!-- TEXT DATA ID -->
+            <TextView
+                android:id="@+id/textData2Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="1002"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- TEXT DATA NAME -->
+            <TextView
+                android:id="@+id/textData2Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="Leo"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- TEXT DATA ROLE -->
+            <TextView
+                android:id="@+id/textData2Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_marginStart="200dp"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="Manager"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+        </TableRow>
+        <!-- END DATA 2 TABLE -->
+
+        <!-- DATA 3 TABLE -->
+        <TableRow
+            android:id="@+id/data3Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
+
+            <!-- TEXT DATA ID -->
+            <TextView
+                android:id="@+id/textData3Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="1003"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- TEXT DATA NAME -->
+            <TextView
+                android:id="@+id/textData3Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="Panda"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- TEXT DATA ROLE -->
+            <TextView
+                android:id="@+id/textData3Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_marginStart="200dp"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="Manager"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+        </TableRow>
+        <!-- END DATA 3 TABLE -->
+
+        <!-- DATA 4 TABLE -->
+        <TableRow
+            android:id="@+id/data4Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_data_footer_table"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
+
+            <!-- TEXT DATA ID -->
+            <TextView
+                android:id="@+id/textData4Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="1001"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- TEXT DATA NAME -->
+            <TextView
+                android:id="@+id/textData4Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="Bas"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+            <!-- TEXT DATA ROLE -->
+            <TextView
+                android:id="@+id/textData4Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_marginStart="200dp"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="left"
+                android:text="Cashier"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+
+        </TableRow>
+        <!-- END DATA 4 TABLE -->
+
+    </TableLayout>
+    <!-- END TABLE -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

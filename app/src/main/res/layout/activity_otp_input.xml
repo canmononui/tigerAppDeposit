@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestSystemActivity"
+    android:background="@color/yellow" >
+
+    <!-- LAYOUT TOP HEADER -->
+    <LinearLayout
+        android:id="@+id/topHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- LAYOUT BACK BUTTON [LEFT] -->
+        <LinearLayout
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            android:clickable="true" >
+
+            <!-- BACK BUTTON -->
+            <ImageView
+                android:id="@+id/imgBackButton"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:src="@drawable/backicon" />
+        </LinearLayout>
+        <!-- END LAYOUT BACK BUTTON [LEFT] -->
+
+        <!-- TEXT HEADER TOP [CENTER] -->
+        <LinearLayout
+            android:id="@+id/textHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!-- TEXT SHOP NAME -->
+            <TextView
+                android:id="@+id/textShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="ปตท."
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+            <!-- TEXT SHOP BRANCH & BOX NUMBER -->
+            <TextView
+                android:id="@+id/textBranchBoxNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:layout_marginTop="-5dp"
+                android:text="สาขาดินแดง #1"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </LinearLayout>
+        <!-- END TEXT HEADER TOP [CENTER] -->
+
+        <!-- LAYOUT BACK BUTTON [RIGHT] -->
+        <LinearLayout
+            android:id="@+id/layoutBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alwaysDrawnWithCache="false"
+            android:animateLayoutChanges="false"
+            android:gravity="end">
+
+            <!-- BOX IMAGE -->
+            <ImageView
+                android:id="@+id/boxImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/machine" />
+
+            <!-- DOT BOX STATUS -->
+            <View
+                android:id="@+id/status"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/dot_status_online"/>
+        </LinearLayout>
+        <!-- END LAYOUT BACK BUTTON [RIGHT] -->
+    </LinearLayout>
+    <!-- END LAYOUT TOP HEADER -->
+
+    <!-- BG WHITE -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white"
+        app:layout_constraintTop_toBottomOf="@+id/topHeader"
+        android:layout_marginTop="30dp" />
+
+
+    <!-- TEXT MENU -->
+    <TextView
+        android:id="@+id/textMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kanit_medium"
+        android:layout_marginTop="30dp"
+        android:text="OTP Verification"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+
+    <!-- TEXT MENU DES -->
+    <TextView
+        android:id="@+id/textMenuDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kanit_medium"
+        android:text="โปรดตรวจสอบและกรอกรหัส OTP ที่ได้รับ"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/textMenu" />
+
+    <!-- LAYOUT OTP -->
+    <LinearLayout
+        android:id="@+id/layoutInput"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:gravity="center"
+        android:weightSum="12"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/textMenuDes">
+
+        <!-- OTP PIN 1 -->
+        <LinearLayout
+            android:id="@+id/layoutPin1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_input_gray_active"
+            android:gravity="center"
+            android:layout_marginEnd="10dp">
+            <!-- TEXT -->
+            <TextView
+                android:id="@+id/textPin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="45sp" />
+        </LinearLayout>
+        <!-- END OTP PIN 1 -->
+
+        <!-- OTP PIN 2 -->
+        <LinearLayout
+            android:id="@+id/layoutPin2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_input_gray"
+            android:gravity="center"
+            android:layout_marginEnd="10dp">
+            <!-- TEXT -->
+            <TextView
+                android:id="@+id/textPin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="45sp" />
+        </LinearLayout>
+        <!-- END OTP PIN 2 -->
+
+        <!-- OTP PIN 3 -->
+        <LinearLayout
+            android:id="@+id/layoutPin3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_input_gray"
+            android:gravity="center"
+            android:layout_marginEnd="10dp" >
+            <!-- TEXT -->
+            <TextView
+                android:id="@+id/textPin3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="45sp" />
+        </LinearLayout>
+        <!-- END OTP PIN 3 -->
+
+        <!-- OTP PIN 4 -->
+        <LinearLayout
+            android:id="@+id/layoutPin4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_input_gray"
+            android:gravity="center"
+            android:layout_marginEnd="10dp" >
+            <!-- TEXT -->
+            <TextView
+                android:id="@+id/textPin4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="45sp" />
+        </LinearLayout>
+        <!-- END OTP PIN 4 -->
+
+        <!-- OTP PIN 5 -->
+        <LinearLayout
+            android:id="@+id/layoutPin5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_input_gray"
+            android:gravity="center"
+            android:layout_marginEnd="10dp" >
+            <!-- TEXT -->
+            <TextView
+                android:id="@+id/textPin5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="45sp" />
+        </LinearLayout>
+        <!-- END OTP PIN 5 -->
+
+        <!-- OTP PIN 6 -->
+        <LinearLayout
+            android:id="@+id/layoutPin6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/bg_input_gray"
+            android:gravity="center">
+            <!-- TEXT -->
+            <TextView
+                android:id="@+id/textPin6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="6"
+                android:textColor="@color/black"
+                android:textSize="45sp" />
+        </LinearLayout>
+        <!-- END OTP PIN 5 -->
+
+    </LinearLayout>
+    <!-- END LAYOUT OTP -->
+
+    <!-- OTP DES -->
+    <LinearLayout
+        android:id="@+id/otpDes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutInput">
+
+        <!-- TEXT REF -->
+        <TextView
+            android:id="@+id/textRef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="รหัสอ้างอิง "
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <!-- TEXT REF CODE -->
+        <TextView
+            android:id="@+id/textRefCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="RDPQ34"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <!-- LAYOUT RIGHT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal">
+
+            <!-- TEXT -->
+            <TextView
+                android:id="@+id/textTime1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="เหลือเวลา "
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <!-- TEXT TIME -->
+            <TextView
+                android:id="@+id/textTimeSec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="4:55"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <!-- TEXT -->
+            <TextView
+                android:id="@+id/textTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text=" วินาที"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+        </LinearLayout>
+        <!-- END LAYOUT RIGHT -->
+
+    </LinearLayout>
+    <!-- END OTP DES -->
+
+    <!-- RESEND OTP BUTTON -->
+    <Button
+        android:id="@+id/buttonResendOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="70"
+        android:background="@drawable/bg_button_yellow"
+        android:fontFamily="@font/kanit_regular"
+        android:padding="25dp"
+        android:stateListAnimator="@null"
+        android:text="ส่งรหัส OTP อีกครั้ง"
+        android:textColor="@color/black"
+        android:textSize="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/otpDes" />
+
+    <!-- CANCEL BUTTON -->
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="70"
+        android:background="@drawable/bg_button_dark_gray"
+        android:fontFamily="@font/kanit_regular"
+        android:padding="25dp"
+        android:stateListAnimator="@null"
+        android:text="ยกเลิก"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonResendOtp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

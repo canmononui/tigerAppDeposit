@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- LAYOUT ALERT POPUP -->
+    <RelativeLayout
+        android:id="@+id/layoutPopup"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:background="@drawable/bg_alert_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <LinearLayout
+            android:id="@+id/layoutDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp">
+            <!-- IMAGE ICON -->
+            <ImageView
+                android:id="@+id/imgIcon"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/error_alert_icon" />
+            <!-- TEXT TOPIC -->
+            <TextView
+                android:id="@+id/textTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/kanit_medium"
+                android:text="รหัสผ่านใหม่ไม่ถูกต้อง"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+            <!-- TEXT DES -->
+            <TextView
+                android:id="@+id/textDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="โปรดเพิ่มรหัสผ่านทั้งสองให้ตรงกัน"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <!-- LAYOUT BUTTON -->
+        <LinearLayout
+            android:id="@+id/layoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- START BUTTON -->
+            <Button
+                android:id="@+id/buttonSubmitStartAlert"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_button_white_alert"
+                android:fontFamily="@font/kanit_regular"
+                android:padding="25dp"
+                android:stateListAnimator="@null"
+                android:text="ตกลง"
+                android:textColor="@color/black"
+                android:textSize="45dp" />
+        </LinearLayout>
+        <!-- END LAYOUT BUTTON -->
+
+    </RelativeLayout>
+    <!-- END LAYOUT ALERT POPUP -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

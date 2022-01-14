@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow">
+
+    <!-- CENTER LAYOUT -->
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- BOX IMAGE ICON-->
+        <ImageView
+            android:id="@+id/finishLoadingImg"
+            android:layout_width="380dp"
+            android:layout_height="380dp"
+            android:src="@drawable/finish_loading_icon" />
+
+        <!-- THX TEXT -->
+        <TextView
+            android:id="@+id/thxText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text="ขอบคุณสำหรับการทำรายการ"
+            android:textColor="@color/black"
+            android:textSize="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monkIcon" />
+    </LinearLayout>
+    <!-- END CENTER LAYOUT -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

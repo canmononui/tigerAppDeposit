@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- LAYOUT ALERT POPUP -->
+    <RelativeLayout
+        android:id="@+id/layoutPopup"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:background="@drawable/bg_alert_yellow"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- TOP TEXT -->
+        <TextView
+            android:id="@+id/textTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="ซองดรอบ"
+            android:textColor="@color/black"
+            android:textSize="45sp" />
+
+        <!-- TEXT DES -->
+        <TextView
+            android:id="@+id/textDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTop"
+            android:fontFamily="@font/kanit_medium"
+            android:text="โปรดเพิ่มจำนวนเงินที่ใส่ในซองดรอบ"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <!-- MONEY INPUT -->
+        <EditText
+            android:id="@+id/moneyInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textDes"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_input_gray"
+            android:drawableStart="@drawable/thbicon"
+            android:drawablePadding="30dp"
+            android:ems="10"
+            android:fontFamily="@font/kanit_medium"
+            android:hint="จำนวนเงิน (฿)"
+            android:inputType="number"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:textSize="45dp"
+            app:layout_constraintTop_toBottomOf="@+id/textDes" />
+        <!-- END MONEY INPUT -->
+
+        <!-- SUBMIT BUTTON -->
+        <Button
+            android:id="@+id/buttonSubmitAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/moneyInput"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_button_white_alert"
+            android:fontFamily="@font/kanit_regular"
+            android:padding="25dp"
+            android:stateListAnimator="@null"
+            android:text="ตกลง"
+            android:textColor="@color/black"
+            android:textSize="45dp" />
+        <!-- END SUBMIT BUTTON -->
+
+        <!-- LAYOUT BUTTON -->
+        <LinearLayout
+            android:id="@+id/layoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_dark_gray"
+            android:orientation="vertical"
+            android:padding="30dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- TEXT TOP -->
+            <TextView
+                android:id="@+id/textTopDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textTop"
+                android:fontFamily="@font/kanit_medium"
+                android:text="วิธีการใช้งานซองดรอบ"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- TEXT 1 -->
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textTop"
+                android:fontFamily="@font/kanit_medium"
+                android:text="1. กรอกจำนวนเงินที่ต้องการฝากและกดปุ่ม “ตกลง”"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <!-- TEXT 2 -->
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textTop"
+                android:fontFamily="@font/kanit_medium"
+                android:text="2. รับใบเสร็จที่ได้จากเครื่องฝาก"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <!-- TEXT 3 -->
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textTop"
+                android:fontFamily="@font/kanit_medium"
+                android:text="3. รับซองดรอบจากเครื่องฝากเงิน"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <!-- TEXT 4 -->
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textTop"
+                android:fontFamily="@font/kanit_medium"
+                android:text="4. นำเงินตามจำนวนที่ระบุพร้อมใบเสร็จใส่ลงในซองดรอบ"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <!-- TEXT 5 -->
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textTop"
+                android:fontFamily="@font/kanit_medium"
+                android:text="5. นำซองดรอบใส่ลงในเครื่องฝากเงิน"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <!-- TEXT 6 -->
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textTop"
+                android:fontFamily="@font/kanit_medium"
+                android:text="6. ตรวจสอบยอดเงินในหน้ารายการฝากเงินที่หัวข้อ “ยอดเงินจากซองดรอบ”"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+        <!-- END LAYOUT BUTTON -->
+
+    </RelativeLayout>
+    <!-- END LAYOUT ALERT POPUP -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

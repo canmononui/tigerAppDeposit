@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DepositActivity"
+    android:background="@color/yellow" >
+
+    <!-- LAYOUT TOP HEADER -->
+    <LinearLayout
+        android:id="@+id/topHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- LAYOUT BACK BUTTON [LEFT] -->
+        <LinearLayout
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            android:clickable="true" >
+
+            <!-- BACK BUTTON -->
+            <ImageView
+                android:id="@+id/imgBackButton"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:src="@drawable/backicon" />
+        </LinearLayout>
+        <!-- END LAYOUT BACK BUTTON [LEFT] -->
+
+        <!-- TEXT HEADER TOP [CENTER] -->
+        <LinearLayout
+            android:id="@+id/textHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!-- TEXT SHOP NAME -->
+            <TextView
+                android:id="@+id/textShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="ปตท."
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+            <!-- TEXT SHOP BRANCH & BOX NUMBER -->
+            <TextView
+                android:id="@+id/textBranchBoxNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:layout_marginTop="-5dp"
+                android:text="สาขาดินแดง #1"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </LinearLayout>
+        <!-- END TEXT HEADER TOP [CENTER] -->
+
+        <!-- LAYOUT BACK BUTTON [RIGHT] -->
+        <LinearLayout
+            android:id="@+id/layoutBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alwaysDrawnWithCache="false"
+            android:animateLayoutChanges="false"
+            android:gravity="end">
+
+            <!-- BOX IMAGE -->
+            <ImageView
+                android:id="@+id/boxImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/machine" />
+
+            <!-- DOT BOX STATUS -->
+            <View
+                android:id="@+id/status"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/dot_status_online"/>
+        </LinearLayout>
+        <!-- END LAYOUT BACK BUTTON [RIGHT] -->
+    </LinearLayout>
+    <!-- END LAYOUT TOP HEADER -->
+
+    <!-- BG WHITE -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_white"
+        app:layout_constraintTop_toBottomOf="@+id/topHeader" />
+
+    <!-- TEXT -->
+    <TextView
+        android:id="@+id/textMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kanit_medium"
+        android:layout_marginTop="30dp"
+        android:text="รายงานความเคลื่อนไหวรายวัน"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <!-- LAYOUT BUTTON -->
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="10"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/textMenu">
+
+        <!-- OPTION BUTTON -->
+
+        <!-- PREVIOUS BUTTON -->
+        <Button
+            android:id="@+id/buttonOption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/bg_button_yellow"
+            android:fontFamily="@font/kanit_regular"
+            android:paddingStart="15dp"
+            android:paddingTop="25dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="25dp"
+            android:stateListAnimator="@null"
+            android:text="ทั้งหมด"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="35dp" />
+
+        <Button
+            android:id="@+id/buttonPrevious"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_light_gray"
+            android:fontFamily="@font/kanit_regular"
+            android:padding="20dp"
+            android:stateListAnimator="@null"
+            android:drawableStart="@drawable/previous_button_icon"
+            android:textColor="@color/black"
+            android:textSize="45dp" />
+
+        <!-- DATE BUTTON -->
+        <Button
+            android:id="@+id/buttonCalendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="4"
+            android:background="@drawable/bg_button_yellow"
+            android:fontFamily="@font/kanit_regular"
+            android:paddingStart="15dp"
+            android:paddingTop="25dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="25dp"
+            android:stateListAnimator="@null"
+            android:text="23/12/2021"
+            android:textColor="@color/black"
+            android:textSize="35dp" />
+
+        <!-- PREVIOUS BUTTON -->
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_light_gray"
+            android:fontFamily="@font/kanit_regular"
+            android:padding="20dp"
+            android:stateListAnimator="@null"
+            android:drawableStart="@drawable/next_button_icon"
+            android:textColor="@color/black"
+            android:textSize="45dp" />
+
+    </LinearLayout>
+    <!-- END LAYOUT BUTTON -->
+
+    <!-- TABLE -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textMenu"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutButton">
+
+        <!-- HEADER TABLE -->
+        <TableRow
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_header_table"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp" >
+
+            <!-- TEXT HEADER ID -->
+            <TextView
+                android:id="@+id/textHeaderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="ID" />
+
+            <!-- TEXT HEADER DATE -->
+            <TextView
+                android:id="@+id/textHeaderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="2"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="วันที่" />
+
+            <!-- TEXT HEADER STATUS -->
+            <TextView
+                android:id="@+id/textHeaderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="3"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="สถานะ" />
+
+            <!-- TEXT HEADER DEPOSIT -->
+            <TextView
+                android:id="@+id/textHeaderDeposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="4"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="ฝากได้" />
+
+            <!-- TEXT HEADER DROP -->
+            <TextView
+                android:id="@+id/textHeaderDrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="ดรอป" />
+
+            <!-- TEXT HEADER SUM -->
+            <TextView
+                android:id="@+id/textHeaderSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="รวม" />
+
+            <!-- TEXT HEADER BALANCE -->
+            <TextView
+                android:id="@+id/textHeaderBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="คงเหลือ" />
+
+        </TableRow>
+        <!-- END HEADER TABLE -->
+
+        <!-- DATA 1 TABLE -->
+        <TableRow
+            android:id="@+id/data1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp" >
+
+            <!-- TEXT DATA ID -->
+            <TextView
+                android:id="@+id/textData1Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="1001" />
+
+            <!-- TEXT DATA DATE -->
+            <TextView
+                android:id="@+id/textData1Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="2"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="23/12/2021 09:07:20" />
+
+            <!-- TEXT DATA STATUS -->
+            <TextView
+                android:id="@+id/textData1Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="3"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="DE" />
+
+            <!-- TEXT DATA DEPOSIT -->
+            <TextView
+                android:id="@+id/textData1Deposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="4"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="20" />
+
+            <!-- TEXT DATA DROP -->
+            <TextView
+                android:id="@+id/textData1Drop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="0" />
+
+            <!-- TEXT DATA SUM -->
+            <TextView
+                android:id="@+id/textData1Sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="20" />
+
+            <!-- TEXT DATA BALANCE -->
+            <TextView
+                android:id="@+id/textData1Balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="20" />
+
+        </TableRow>
+        <!-- END DATA 1 TABLE -->
+
+        <!-- DATA 2 TABLE -->
+        <TableRow
+            android:id="@+id/data2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp" >
+
+            <!-- TEXT DATA ID -->
+            <TextView
+                android:id="@+id/textData2Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="1001" />
+
+            <!-- TEXT DATA DATE -->
+            <TextView
+                android:id="@+id/textData2Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="2"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="23/12/2021 09:22:20" />
+
+            <!-- TEXT DATA STATUS -->
+            <TextView
+                android:id="@+id/textData2Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="3"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="OP" />
+
+            <!-- TEXT DATA DEPOSIT -->
+            <TextView
+                android:id="@+id/textData2Deposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="4"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="-" />
+
+            <!-- TEXT DATA DROP -->
+            <TextView
+                android:id="@+id/textData2Drop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="-" />
+
+            <!-- TEXT DATA SUM -->
+            <TextView
+                android:id="@+id/textData2Sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="20" />
+
+            <!-- TEXT DATA BALANCE -->
+            <TextView
+                android:id="@+id/textData2Balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="0" />
+
+        </TableRow>
+        <!-- END DATA 2 TABLE -->
+
+        <!-- DATA 3 TABLE -->
+        <TableRow
+            android:id="@+id/data3Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp" >
+
+            <!-- TEXT DATA ID -->
+            <TextView
+                android:id="@+id/textData3Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="1001" />
+
+            <!-- TEXT DATA DATE -->
+            <TextView
+                android:id="@+id/textData3Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="2"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="23/12/2021 09:22:20" />
+
+            <!-- TEXT DATA STATUS -->
+            <TextView
+                android:id="@+id/textData3Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="3"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="OP" />
+
+            <!-- TEXT DATA DEPOSIT -->
+            <TextView
+                android:id="@+id/textData3Deposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="4"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="-" />
+
+            <!-- TEXT DATA DROP -->
+            <TextView
+                android:id="@+id/textData3Drop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="-" />
+
+            <!-- TEXT HEADER SUM -->
+            <TextView
+                android:id="@+id/textData3Sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="20" />
+
+            <!-- TEXT DATA BALANCE -->
+            <TextView
+                android:id="@+id/textData3Balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="0" />
+
+        </TableRow>
+        <!-- END DATA 3 TABLE -->
+
+        <!-- DATA 4 TABLE -->
+        <TableRow
+            android:id="@+id/data4Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_data_footer_table"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp" >
+
+            <!-- TEXT DATA ID -->
+            <TextView
+                android:id="@+id/textData4Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="1001" />
+
+            <!-- TEXT DATA DATE -->
+            <TextView
+                android:id="@+id/textData4Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="2"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="23/12/2021 09:07:20" />
+
+            <!-- TEXT DATA STATUS -->
+            <TextView
+                android:id="@+id/textData4Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="3"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="DE" />
+
+            <!-- TEXT DATA DEPOSIT -->
+            <TextView
+                android:id="@+id/textData4Deposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="4"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="20" />
+
+            <!-- TEXT DATA DROP -->
+            <TextView
+                android:id="@+id/textData4Drop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="0" />
+
+            <!-- TEXT DATA SUM -->
+            <TextView
+                android:id="@+id/textData4Sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="20" />
+
+            <!-- TEXT DATA BALANCE -->
+            <TextView
+                android:id="@+id/textData4Balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_column="5"
+                android:fontFamily="@font/kanit_medium"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:text="20" />
+
+        </TableRow>
+        <!-- END DATA 4 TABLE -->
+
+    </TableLayout>
+    <!-- END TABLE -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

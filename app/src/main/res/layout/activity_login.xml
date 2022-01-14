@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/yellow" >
+
+    <!-- LAYOUT HEADER -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:background="@drawable/bg_header_login_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- LAYOUT TOP HEADER -->
+        <LinearLayout
+            android:id="@+id/topHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- LAYOUT [LEFT] -->
+            <LinearLayout
+                android:id="@+id/layoutLeft"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:clickable="true" >
+
+                <!-- TIGER TEXT -->
+                <ImageView
+                    android:id="@+id/tigerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tigercashbox_text" />
+            </LinearLayout>
+            <!-- END LAYOUT [LEFT] -->
+
+            <!-- TEXT HEADER TOP [CENTER] -->
+            <LinearLayout
+                android:id="@+id/textHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:paddingEnd="10dp" >
+                <!-- TEXT SHOP NAME -->
+                <TextView
+                    android:id="@+id/textShopName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="ปตท."
+                    android:textColor="@color/black"
+                    android:textSize="35sp" />
+                <!-- TEXT SHOP BRANCH & BOX NUMBER -->
+                <TextView
+                    android:id="@+id/textBranchBoxNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kanit_medium"
+                    android:layout_marginTop="-5dp"
+                    android:text="สาขาดินแดง #1"
+                    android:textColor="@color/black"
+                    android:textSize="30dp" />
+            </LinearLayout>
+            <!-- END TEXT HEADER TOP [CENTER] -->
+
+            <!-- LAYOUT BACK BUTTON [RIGHT] -->
+            <LinearLayout
+                android:id="@+id/layoutBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:alwaysDrawnWithCache="false"
+                android:animateLayoutChanges="false"
+                android:gravity="end">
+
+                <!-- BOX IMAGE -->
+                <ImageView
+                    android:id="@+id/boxImg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/machine" />
+
+                <!-- DOT BOX STATUS -->
+                <View
+                    android:id="@+id/status"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="-20dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/dot_status_online"/>
+            </LinearLayout>
+            <!-- END LAYOUT BACK BUTTON [RIGHT] -->
+        </LinearLayout>
+        <!-- END LAYOUT TOP HEADER -->
+
+        <ImageView
+            android:id="@+id/menu1Img"
+            android:layout_width="wrap_content"
+            android:layout_height="190dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/tigercashbox_logo" />
+    </LinearLayout>
+    <!-- END LAYOUT HEADER -->
+
+    <!-- USERNAME INPUT -->
+    <EditText
+        android:id="@+id/usernameInput"
+        android:background="@drawable/bg_input_gray"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:drawableStart="@drawable/user_input_icon"
+        android:drawablePadding="30dp"
+        android:hint="ชื่อผู้ใช้"
+        android:fontFamily="@font/kanit_medium"
+        android:textColor="@color/black"
+        android:inputType="text"
+        android:textSize="45dp"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <!-- PASSWORD INPUT -->
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_input_gray"
+        android:drawableStart="@drawable/lock_input_icon"
+        android:drawablePadding="30dp"
+        android:ems="10"
+        android:fontFamily="@font/kanit_medium"
+        android:hint="รหัสผ่าน"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textSize="45dp"
+        app:layout_constraintTop_toBottomOf="@+id/usernameInput"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <LinearLayout
+        android:id="@+id/LayoutRememberButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput">
+
+        <!-- SWITCH -->
+        <Switch
+            android:id="@+id/switchOnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:scaleX="2.5"
+            android:scaleY="2.5"/>
+
+        <!-- TEXT -->
+        <TextView
+            android:id="@+id/textRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/kanit_regular"
+            android:textColor="@color/black"
+            android:text="จดจำฉัน"
+            android:textSize="40dp" />
+
+    </LinearLayout>
+
+    <!-- SUBMIT BUTTON -->
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="70"
+        android:background="@drawable/bg_button_dark_gray"
+        android:fontFamily="@font/kanit_regular"
+        android:padding="25dp"
+        android:stateListAnimator="@null"
+        android:text="เข้าสู่ระบบ"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutRememberButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

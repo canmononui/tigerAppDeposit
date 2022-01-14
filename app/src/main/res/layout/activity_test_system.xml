@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestSystemActivity"
+    android:background="@color/yellow" >
+
+    <!-- LAYOUT TOP HEADER -->
+    <LinearLayout
+        android:id="@+id/topHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- LAYOUT BACK BUTTON [LEFT] -->
+        <LinearLayout
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            android:clickable="true" >
+
+            <!-- BACK BUTTON -->
+            <ImageView
+                android:id="@+id/imgBackButton"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:src="@drawable/backicon" />
+        </LinearLayout>
+        <!-- END LAYOUT BACK BUTTON [LEFT] -->
+
+        <!-- TEXT HEADER TOP [CENTER] -->
+        <LinearLayout
+            android:id="@+id/textHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!-- TEXT SHOP NAME -->
+            <TextView
+                android:id="@+id/textShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="ปตท."
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+            <!-- TEXT SHOP BRANCH & BOX NUMBER -->
+            <TextView
+                android:id="@+id/textBranchBoxNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:layout_marginTop="-5dp"
+                android:text="สาขาดินแดง #1"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </LinearLayout>
+        <!-- END TEXT HEADER TOP [CENTER] -->
+
+        <!-- LAYOUT BACK BUTTON [RIGHT] -->
+        <LinearLayout
+            android:id="@+id/layoutBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alwaysDrawnWithCache="false"
+            android:animateLayoutChanges="false"
+            android:gravity="end">
+
+            <!-- BOX IMAGE -->
+            <ImageView
+                android:id="@+id/boxImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/machine" />
+
+            <!-- DOT BOX STATUS -->
+            <View
+                android:id="@+id/status"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/dot_status_online"/>
+        </LinearLayout>
+        <!-- END LAYOUT BACK BUTTON [RIGHT] -->
+    </LinearLayout>
+    <!-- END LAYOUT TOP HEADER -->
+
+    <!-- BG WHITE -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_white"
+        app:layout_constraintTop_toBottomOf="@+id/topHeader" />
+
+    <!-- TEXT -->
+    <TextView
+        android:id="@+id/textMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kanit_medium"
+        android:layout_marginTop="30dp"
+        android:text="ทดสอบระบบ"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <!-- ROW BUTTON -->
+    <LinearLayout
+        android:id="@+id/buttonMenuRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:weightSum="100"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/textMenu">
+        <!-- BUTTON 1 -->
+        <LinearLayout
+            android:id="@+id/layoutButtonMenu1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33.33"
+            android:background="@drawable/bg_button_yellow"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp">
+            <!-- IMAGE MENU -->
+            <ImageView
+                android:id="@+id/menu1Img"
+                android:layout_width="80dp"
+                android:layout_height="75dp"
+                android:src="@drawable/wifi" />
+            <!-- TEXT MENU -->
+            <TextView
+                android:id="@+id/menu1Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/kanit_medium"
+                android:text="WiFi"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+        </LinearLayout>
+        <!-- END BUTTON 1 -->
+
+        <!-- BUTTON 2 -->
+        <LinearLayout
+            android:id="@+id/layoutButtonMenu2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="33.33"
+            android:background="@drawable/bg_button_yellow"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp">
+            <!-- IMAGE MENU -->
+            <ImageView
+                android:id="@+id/menu2Img"
+                android:layout_width="80dp"
+                android:layout_height="75dp"
+                android:src="@drawable/ethernet" />
+            <!-- TEXT MENU -->
+            <TextView
+                android:id="@+id/menu2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Ethernet"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+        </LinearLayout>
+        <!-- END BUTTON 2 -->
+
+        <!-- BUTTON 3 -->
+        <LinearLayout
+            android:id="@+id/layoutButtonMenu3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="33.33"
+            android:background="@drawable/bg_button_yellow"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp">
+            <!-- IMAGE MENU -->
+            <ImageView
+                android:id="@+id/menu3Img"
+                android:layout_width="80dp"
+                android:layout_height="75dp"
+                android:src="@drawable/print" />
+            <!-- TEXT MENU -->
+            <TextView
+                android:id="@+id/menu3Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/kanit_medium"
+                android:text="เครื่องพิมพ์"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+        </LinearLayout>
+        <!-- END BUTTON 3 -->
+    </LinearLayout>
+    <!-- END ROW BUTTON -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

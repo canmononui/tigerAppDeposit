@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-hdpi/bg_alert_yellow.xml" value="0.266875" />
+        <entry key="app/src/main/res/drawable-hdpi/bg_button_white.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable-hdpi/bg_button_white_alert.xml" value="0.266875" />
+        <entry key="app/src/main/res/drawable-hdpi/bg_button_yellow.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable-hdpi/bg_input_gray.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable-hdpi/bg_white.xml" value="0.3734375" />
+        <entry key="app/src/main/res/drawable-hdpi/dot_status_offline.xml" value="0.3734375" />
+        <entry key="app/src/main/res/drawable-hdpi/dot_status_online.xml" value="0.3734375" />
+        <entry key="app/src/main/res/drawable-ldpi/banknote_100.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable-ldpi/bg_amount_gray.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable-ldpi/bg_banknotes_balance_white.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable-ldpi/bg_coin_balance_black.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable-ldpi/coin_1.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable-xhdpi/bg_button_yellow_alert.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable-xhdpi/bg_total_darkgrey.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable/bg_button_dark_gray.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable/bg_button_light_gray.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable/bg_dark_gray.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable/bg_data_footer_table.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable/bg_data_table.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable/bg_drop_gray.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable/bg_header_login_white.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable/bg_header_table.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable/bg_input_gray_active.xml" value="0.280078125" />
+        <entry key="app/src/main/res/drawable/bg_line_gray.xml" value="0.280078125" />
+        <entry key="app/src/main/res/layout/activity_change_password.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/activity_deposit.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_finish_loading.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/activity_history.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_money_balance.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_open_box_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_open_box_status.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_otp_input.xml" value="0.24838012958963282" />
+        <entry key="app/src/main/res/layout/activity_setting_menu.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_setting_time_box_open.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/activity_test_system.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/activity_user_list.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/alert_bottom_option_deposit.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/alert_bottom_option_history.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/alert_popup_change_pass_fail.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/alert_popup_drop_money.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/alert_popup_drop_money_input.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/alert_popup_login_fail.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/alert_popup_otp_fail.xml" value="0.26796875" />
+        <entry key="app/src/main/res/layout/deposit.xml" value="0.26796875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
