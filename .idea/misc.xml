@@ -34,7 +34,7 @@
         <entry key="app/src/main/res/layout/activity_history.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_money_balance.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_money_balance.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_open_box_menu.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_open_box_status.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_otp_input.xml" value="0.24838012958963282" />
